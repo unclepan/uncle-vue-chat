@@ -1,13 +1,20 @@
 <template>
   <div :class="$style['message-own']">
-    <div :class="$style['message-contents']">
-      <img
-        v-if="message.imageUrl"
-        :src="message.imageUrl"
-        alt=""
-        style="width: 100%">
+    <img
+      v-if="message.type === 'image'"
+      :src="message.imageUrl"
+      alt=""
+      style="width: 100%">
+    <span
+      v-if="message.type === 'emoji'"
+      :class="$style.emoji">
       {{ message.contents }}
-     </div>
+    </span>
+    <span
+      v-if="message.type === 'message'"
+      :class="$style.message">
+      {{ message.contents }}
+    </span>
     <div :class="$style.head">
       {{message.author[0]}}
     </div>
@@ -34,12 +41,16 @@ export default {
 .message-own{
   display: flex;
   justify-content: flex-end;
-  .message-contents{
-    border-radius: 12px 4px;
+  .emoji{
+    font-size: 42px;
+    line-height: 46px;
+  }
+  .message{
     color: #556d7a;
+    line-height: 21px;
+    border-radius: 12px 4px;
     background-color: #d8faf5;
     padding: 10px;
-    line-height: 20px;
     max-width: 60%;
   }
   .head{

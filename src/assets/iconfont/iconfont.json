@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "57213760",
+      "name": "smile",
+      "font_class": "smile",
+      "unicode": "e78f",
+      "unicode_decimal": 59279
+    },
+    {
+      "icon_id": "57213934",
+      "name": "attachment",
+      "font_class": "attachment",
+      "unicode": "e83d",
+      "unicode_decimal": 59453
+    },
+    {
       "icon_id": "57213963",
       "name": "fullscreen",
       "font_class": "fullscreen",
@@ -32,6 +46,13 @@
       "font_class": "minus",
       "unicode": "e88c",
       "unicode_decimal": 59532
+    },
+    {
+      "icon_id": "57214337",
+      "name": "send",
+      "font_class": "send",
+      "unicode": "e9d0",
+      "unicode_decimal": 59856
     }
   ]
 }
