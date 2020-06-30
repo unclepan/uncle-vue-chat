@@ -39,7 +39,7 @@ export default {
 <style lang="scss" module>
 .message-foreign{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   .head{
     height: 40px;
     width: 40px;

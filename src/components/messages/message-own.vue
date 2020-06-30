@@ -1,10 +1,17 @@
 <template>
   <div :class="$style['message-own']">
+    <a
+      v-if="message.type === 'file'"
+      :href="message.contents.url"
+      :download="message.contents.name"
+      :class="$style.file">
+      <span class="icon iconfont icon-attachment"></span>
+      {{message.contents.name}}
+    </a>
     <img
       v-if="message.type === 'image'"
-      :src="message.imageUrl"
-      alt=""
-      style="width: 100%">
+      :src="message.contents"
+      :class="$style.image">
     <span
       v-if="message.type === 'emoji'"
       :class="$style.emoji">
@@ -15,6 +22,7 @@
       :class="$style.message">
       {{ message.contents }}
     </span>
+
     <div :class="$style.head">
       {{message.author[0]}}
     </div>
@@ -41,13 +49,24 @@ export default {
 .message-own{
   display: flex;
   justify-content: flex-end;
+  .file{
+    text-decoration: none;
+    line-height: 20px;
+    border-radius: 12px 4px;
+    background-color: #efefef;
+    padding: 10px;
+    max-width: 60%;
+  }
+  .image{
+    max-width: 30%;
+  }
   .emoji{
     font-size: 42px;
     line-height: 46px;
   }
   .message{
     color: #556d7a;
-    line-height: 21px;
+    line-height: 20px;
     border-radius: 12px 4px;
     background-color: #d8faf5;
     padding: 10px;

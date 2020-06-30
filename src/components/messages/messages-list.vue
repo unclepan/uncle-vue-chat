@@ -1,8 +1,8 @@
 <template>
   <transition-group name="messages-list" tag="div">
     <div
-      v-for="(item, index) in feed"
-      :key="index"
+      v-for="(item) in feed"
+      :key="item.key"
       class="messages-list-item"
       :class="$style['messages-item']">
         <message-own v-if="item.id === authorId" :message="item" />

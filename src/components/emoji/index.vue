@@ -1,5 +1,5 @@
 <template>
-  <span :class="$style.emoji">
+  <div :class="$style.emoji">
     <picker
       v-if="isActive"
       :on-emoji-picked="onEmojiPicked"
@@ -10,7 +10,7 @@
       class="icon iconfont icon-smile"
       @click.prevent="openPicker">
     </span>
-  </span>
+  </div>
 </template>
 
 <script>
@@ -46,6 +46,10 @@ export default {
 <style lang="scss" module>
 .emoji{
   position: relative;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
   :global(.icon){
     color: #949596;
     font-size: 20px;

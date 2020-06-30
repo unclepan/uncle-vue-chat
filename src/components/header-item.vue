@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.header">
-    <p>小恶魔</p>
+    <p>明日青年</p>
     <div>
       <span class="icon iconfont icon-minus"></span>
       <span class="icon iconfont icon-fullscreen-exit"></span>
