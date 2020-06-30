@@ -29,22 +29,6 @@ export default {
         contents: 'hi there',
         date: '16:30',
         type: 'message',
-      },
-      {
-        key: 1,
-        id: 1,
-        author: 'Me',
-        contents: 'hello至此,表情插入功能的基本实现。表情插入功能的基本实现。表情插入功能的基本实现。表情插入功能的基本实现。表情插入功能的基本实现。表情插入功能的基本实现。表情插入功能的基本实现。表情插入功能的基本实现。 还没结束 上述例子中,在输入框中表情只能以文本的形式呈现。如果想在输入框中呈现输入的表情,该怎么',
-        date: '16:30',
-        type: 'message',
-      },
-      {
-        key: 2,
-        id: 1,
-        author: 'Me',
-        contents: 'lol',
-        date: '16:31',
-        type: 'message',
       }],
       authorId: 1,
     };
