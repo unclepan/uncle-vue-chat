@@ -1,0 +1,33 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1593423123660'); /* IE9 */
+  src: url('iconfont.eot?t=1593423123660#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPEAAsAAAAACPgAAAN2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDKgqFEIQWATYCJAMUCwwABCAFhG0HVhuoB8guMYXrA6YgjOFQFPfMgvbABwBDKXn4b43ffTOz+1WaWlJIeNQkLo1DNM2k6I1Ko5G+dCL835o2ZbZTRNz8RSijDMm4Avo+X0V0QMKcAn1ZUMVVQ9br7bYXNPwpkbKJ4VX6/9CUosAYGyEH8N/BMdM1t+et0iUjfKNK2nRAA/suoCf7B/kXexH/DkgoFQ/wDBN44X0CzQalcNpV19KDPBXOZYG4xlCTyLPkVnoIodFWt9xbxBtEY3rqfIvX8ffHhoXwJKky59r9F2pNqGL1yOqLvPo/j0Ca9YKQHiJjHlKIK63hc1zS8jwXzUazq82QRvekxOrR1aer/0+4I9prKTdq1oz/8JKsEDXH3IrWbWwq90zju8Sd1KBTMi1PUUBm9YX2TemuQDNWf+Av28fX7CpC9Dg3Yl+u3O7hffvQR4so72WnncNEf6k14lwrPRYNK22mQZuHlvQR3kK9BkPyIE3ZRk+ZTTlXa789wss2MDfC1jPbXrqgbQ+1l9GEc4BTNMru3t7PQgeGolMtYWCymI/P84jhQfjr9vAFf0soslKAPcLJFmn+UQkVjubl1e3A9awz2ep2OnO/LN1bcpa1jsGO7PUpuCIh+lq2cnP+OkCB5zp63hZ//g3dj7avuNT4q3/4dNoWrz/bNq9FnPAFKPuxW0F0gVuHR+1HfIpaj46iQl2d8ik+zkB5T96jusR9IoygR5xSPuX8S0y66/yHtMX5JnrL6fBf8TtyT2LXeEDJP1oK+D20o7uYp/5qtaPV/wHNyKFi6hxPVfR+X61HKrsLWYmvXPfd1+n2Yx1r3+huQqO+HJIGA5A1GkcW7DxUWixBrdFWaDan/uEWPVQuojRh1hZA6HQFSbvPkHW6Qxbsd6j0+w21znCBZgci5JktJoPxrlZhUgcTnprDDCGJpD7dO+ntAsrgJ9WiLqb2gaoxOZyZllGt1YMI6ho3aNNUlq6TmFQlAdfBx4DnJSyrEguEnkbrulyUnk62fVIaIQnI204qMEkHTLApczAGQSIiw90679rXdwEUA2+S2jPQkO8DVBrmeCxTmowRyHqzOGrgWU7WTKNk0elIvoikkgiwOgwC3i1LMLn9LBYg6NLQM4qyIuk0jhxrTtvfKrzGB9DM+bEqUuQoUUWt+YLB8xqhAogB2WtSYZbR3Qhe0sBNYERDQwgAAA==') format('woff2'),
+  url('iconfont.woff?t=1593423123660') format('woff'),
+  url('iconfont.ttf?t=1593423123660') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1593423123660#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fullscreen:before {
+  content: "\e85a";
+}
+
+.icon-fullscreen-exit:before {
+  content: "\e85b";
+}
+
+.icon-close:before {
+  content: "\e889";
+}
+
+.icon-minus:before {
+  content: "\e88c";
+}
+
