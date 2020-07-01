@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss" module>
 .input-container{
-  border-top: 1px solid #e9e9e9;
+  border: 1px solid #e9e9e9;
   padding: 10px;
   .bar{
     display: flex;

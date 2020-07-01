@@ -1,6 +1,20 @@
 <template>
   <div :class="$style['uncle-vue-chat']">
-    <header-item />
+    <header-item>
+      <template slot="but">
+        <svg class="icon svg-icon" aria-hidden="true">
+          <use xlink:href="#icon-minus"></use>
+        </svg>
+
+        <!-- <svg class="icon svg-icon" aria-hidden="true">
+          <use xlink:href="#icon-fullscreen-exit"></use>
+        </svg> -->
+
+        <svg class="icon svg-icon" aria-hidden="true">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </template>
+    </header-item>
     <div :class="$style.messages" ref="messages">
       <list :feed="feed" :author-id="authorId"/>
     </div>
@@ -40,6 +54,9 @@ export default {
     container,
   },
   methods: {
+    ss() {
+      console.log('ss');
+    },
     scrollToBottom() {
       setTimeout(() => {
         const scrollContainer = this.$refs.messages;
@@ -85,11 +102,9 @@ export default {
   font-size: 14px;
   display: flex;
   flex-direction:column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 560px;
+  height: 560px;
+  margin: 0 auto;
   .messages{
     padding: 0 10px;
     transition: all 0.5s;
@@ -98,6 +113,8 @@ export default {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex: 1;
+    border-right: 1px solid #e9e9e9;
+    border-left: 1px solid #e9e9e9;
   }
 }
 </style>

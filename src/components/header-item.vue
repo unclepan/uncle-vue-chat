@@ -2,17 +2,7 @@
   <div :class="$style.header">
     <p>明日青年</p>
     <div>
-      <svg class="icon svg-icon" aria-hidden="true">
-        <use xlink:href="#icon-minus"></use>
-      </svg>
-
-      <svg class="icon svg-icon" aria-hidden="true">
-        <use xlink:href="#icon-fullscreen-exit"></use>
-      </svg>
-
-      <svg class="icon svg-icon" aria-hidden="true">
-        <use xlink:href="#icon-close"></use>
-      </svg>
+      <slot name="but"></slot>
     </div>
   </div>
 </template>
