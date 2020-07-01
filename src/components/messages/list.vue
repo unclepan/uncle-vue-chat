@@ -5,21 +5,18 @@
       :key="item.key"
       class="messages-list-item"
       :class="$style['messages-item']">
-        <message-own v-if="item.id === authorId" :message="item" />
-        <message-foreign v-else :message="item"/>
+        <item :message="item" :authorId="authorId"/>
     </div>
   </transition-group>
 </template>
 
 <script>
-import messageOwn from './message-own.vue';
-import messageForeign from './message-foreign.vue';
+import item from './item.vue';
 
 export default {
   name: 'MessagesList',
   components: {
-    messageOwn,
-    messageForeign,
+    item,
   },
   props: {
     feed: {
@@ -42,8 +39,7 @@ export default {
 .messages-list-item {
   transition: all 0.2s;
 }
-.messages-list-enter, .messages-list-leave-to
-/* .messages-list-leave-active below version 2.1.8 */ {
+.messages-list-enter, .messages-list-leave-to{
   opacity: 0;
   transform: translateY(30px);
 }
@@ -51,6 +47,7 @@ export default {
   position: absolute;
 }
 </style>
+
 <style lang="scss" module>
   .messages-item{
     margin: 20px 0;

@@ -1,29 +1,46 @@
 <template>
-  <div :class="$style['message-own']">
+  <div
+    :class="$style.item"
+    :style="{
+      justifyContent: message.id !== authorId ? 'flex-start' : 'flex-end'
+    }">
+    <div
+      :class="$style['foreign-head']"
+      v-if="message.id !== authorId">
+      {{message.author[0]}}
+    </div>
+
     <a
       v-if="message.type === 'file'"
       :href="message.contents.url"
       :download="message.contents.name"
       :class="$style.file">
-      <span class="icon iconfont icon-attachment"></span>
+      <svg class="icon svg-icon" aria-hidden="true">
+        <use xlink:href="#icon-attachment"></use>
+      </svg>
       {{message.contents.name}}
     </a>
+
     <img
       v-if="message.type === 'image'"
       :src="message.contents"
       :class="$style.image">
+
     <span
       v-if="message.type === 'emoji'"
       :class="$style.emoji">
       {{ message.contents }}
     </span>
+
     <span
       v-if="message.type === 'message'"
-      :class="$style.message">
+      :class="message.id === authorId ? $style['own-message']: $style['foreign-message']">
       {{ message.contents }}
     </span>
 
-    <div :class="$style.head">
+    <div
+      :class="$style['own-head']"
+      v-if="message.id === authorId">
       {{message.author[0]}}
     </div>
   </div>
@@ -31,7 +48,7 @@
 
 <script>
 export default {
-  name: 'MessageOwn',
+  name: 'Item',
   components: {
   },
   props: {
@@ -41,44 +58,71 @@ export default {
         return {};
       },
     },
+    authorId: {
+      type: Number,
+      default: 0,
+      required: false,
+    },
   },
 };
 </script>
 
 <style lang="scss" module>
-.message-own{
+.item{
   display: flex;
-  justify-content: flex-end;
   .file{
     text-decoration: none;
     line-height: 20px;
-    border-radius: 12px 4px;
+    border-radius: 12px;
     background-color: #efefef;
     padding: 10px;
     max-width: 60%;
+    color: #39509d;
+    &:hover{
+      color: #5680fa;
+    }
   }
   .image{
-    max-width: 20%;
+    width: 20%;
+    max-width: 100px;
   }
   .emoji{
     font-size: 42px;
-    line-height: 46px;
+    line-height: 50px;
   }
-  .message{
+
+  @mixin message{
     color: #556d7a;
     line-height: 20px;
     border-radius: 12px 4px;
-    background-color: #d8faf5;
+
     padding: 10px;
     max-width: 60%;
   }
-  .head{
+  .foreign-message{
+    @include message;
+    background-color: #e3ebfb;
+
+  }
+  .own-message{
+    @include message;
+    background-color: #d8faf5;
+
+  }
+  @mixin head{
     height: 40px;
     width: 40px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
     background: #eeeeee;
+  }
+  .foreign-head{
+    @include head;
+    margin-right: 10px;
+  }
+  .own-head{
+    @include head;
     margin-left: 10px;
   }
 }

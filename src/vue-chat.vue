@@ -3,10 +3,10 @@
     <header-item/>
     <div :class="$style.main">
       <div :class="$style.messages" ref="messages">
-        <messages-list :feed="feed" :author-id="authorId"/>
+        <list :feed="feed" :author-id="authorId"/>
       </div>
       <div :class="$style.container">
-        <input-container @newOwnMessage="onNewOwnMessage"/>
+        <container @newOwnMessage="onNewOwnMessage"/>
       </div>
     </div>
   </div>
@@ -16,8 +16,8 @@
 import './assets/iconfont/iconfont';
 import moment from 'moment';
 import headerItem from './components/header-item.vue';
-import messagesList from './components/messages/messages-list.vue';
-import inputContainer from './components/input/input-container.vue';
+import list from './components/messages/list.vue';
+import container from './components/input/container.vue';
 
 export default {
   name: 'VueChat',
@@ -40,8 +40,8 @@ export default {
   },
   components: {
     headerItem,
-    messagesList,
-    inputContainer,
+    list,
+    container,
   },
   methods: {
     scrollToBottom() {
@@ -97,7 +97,7 @@ export default {
       overflow-x: hidden;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      height: 360px;
+      height: calc(100vh - 184px);
     }
   }
 }

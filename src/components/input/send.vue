@@ -24,10 +24,10 @@ export default {
 .send-button{
   cursor: pointer;
   background:#5680fa;
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   border-radius: 10px;
-  line-height: 50px;
+  line-height: 46px;
   text-align: center;
   color: #ffffff;
   box-shadow: 0px 0px 7px 2px rgba(148, 149, 150, 0.2);

@@ -4,9 +4,12 @@
       <emoji :on-emoji-picked="handleEmojiPicked"/>
       <file :on-file-upload="handleFileUpload"/>
     </div>
-    <input-field v-model="message" @newOwnMessage="onNewOwnMessage" />
+    <field
+      v-model="message"
+      @newOwnMessage="onNewOwnMessage"/>
+
     <div :class="$style.send">
-      <send-button @newOwnMessage="onNewOwnMessage" />
+      <send @newOwnMessage="onNewOwnMessage" />
     </div>
 
   </div>
@@ -15,16 +18,16 @@
 <script>
 import emoji from '../emoji/index.vue';
 import file from '../file/index.vue';
-import inputField from './input-field.vue';
-import sendButton from './send-button.vue';
+import field from './field.vue';
+import send from './send.vue';
 
 export default {
   name: 'InputContainer',
   components: {
     emoji,
     file,
-    inputField,
-    sendButton,
+    field,
+    send,
   },
   data() {
     return {
