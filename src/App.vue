@@ -3,7 +3,7 @@
     <vueChat :feedList="feedList" :author="author"/>
     <div :class="$style.footer">
       <iframe
-        src="https://ghbtns.com/github-btn.html?user=unclepan&repo=uncle-vue-chat&type=star"
+        src="https://ghbtns.com/github-btn.html?user=unclepan&repo=uncle-vue-chat&type=star&count=true"
         frameborder="0"
         scrolling="0"
         width="150"
