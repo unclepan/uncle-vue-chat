@@ -1,6 +1,6 @@
 # uncle-vue-chat
 
-## [Demo](https://mattmezza.github.io/vue-beautiful-chat/)
+## [Demo](http://www.yangpan.work:3006/)
 
 ## 安装
 
