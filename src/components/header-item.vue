@@ -2,9 +2,17 @@
   <div :class="$style.header">
     <p>明日青年</p>
     <div>
-      <span class="icon iconfont icon-minus"></span>
-      <span class="icon iconfont icon-fullscreen-exit"></span>
-      <span class="icon iconfont icon-close"></span>
+      <svg class="icon svg-icon" aria-hidden="true">
+        <use xlink:href="#icon-minus"></use>
+      </svg>
+
+      <svg class="icon svg-icon" aria-hidden="true">
+        <use xlink:href="#icon-fullscreen-exit"></use>
+      </svg>
+
+      <svg class="icon svg-icon" aria-hidden="true">
+        <use xlink:href="#icon-close"></use>
+      </svg>
     </div>
   </div>
 </template>

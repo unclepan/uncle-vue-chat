@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import './assets/iconfont/iconfont';
 import moment from 'moment';
 import headerItem from './components/header-item.vue';
 import messagesList from './components/messages/messages-list.vue';
@@ -20,17 +21,21 @@ import inputContainer from './components/input/input-container.vue';
 
 export default {
   name: 'VueChat',
+  props: {
+    feedList: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+    author: {
+      type: Number,
+    },
+  },
   data() {
     return {
-      feed: [{
-        key: 0,
-        id: 0,
-        author: 'Person',
-        contents: 'hi there',
-        date: '16:30',
-        type: 'message',
-      }],
-      authorId: 1,
+      feed: this.feedList,
+      authorId: this.author,
     };
   },
   components: {
@@ -61,13 +66,27 @@ export default {
   },
 };
 </script>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+</style>
+
 <style lang="scss" module>
 .uncle-vue-chat{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
-  width: 50%;
   margin: 0 auto;
   .main{
     border: 1px solid #e9e9e9;

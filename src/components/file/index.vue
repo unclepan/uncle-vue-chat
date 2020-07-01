@@ -1,7 +1,9 @@
 <template>
   <div :class="$style.file">
     <input type="file" @change="handleFileUpload" @click="handleClick" />
-    <span class="icon iconfont icon-attachment"></span>
+    <svg class="icon svg-icon" aria-hidden="true">
+      <use xlink:href="#icon-attachment"></use>
+    </svg>
   </div>
 </template>
 

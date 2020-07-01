@@ -6,10 +6,12 @@
       :on-blur="handlePickerBlur"
       />
 
-    <span
-      class="icon iconfont icon-smile"
-      @click.prevent="openPicker">
+    <span @click.prevent="openPicker">
+      <svg class="icon svg-icon" aria-hidden="true">
+        <use xlink:href="#icon-smile"></use>
+      </svg>
     </span>
+
   </div>
 </template>
 

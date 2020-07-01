@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <vueChat/>
+    <vueChat :feedList="feedList" :author="author"/>
   </div>
 </template>
 
@@ -12,12 +12,20 @@ export default {
   components: {
     vueChat,
   },
+  data() {
+    return {
+      feedList: [
+        {
+          key: 0,
+          id: 0,
+          author: 'Person',
+          contents: 'hi there',
+          date: '16:30',
+          type: 'message',
+        },
+      ],
+      author: 1,
+    };
+  },
 };
 </script>
-
-<style>
-  * {
-    padding: 0;
-    margin: 0;
-  };
-</style>

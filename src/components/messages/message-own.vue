@@ -58,7 +58,7 @@ export default {
     max-width: 60%;
   }
   .image{
-    max-width: 30%;
+    max-width: 20%;
   }
   .emoji{
     font-size: 42px;

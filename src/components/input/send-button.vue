@@ -2,7 +2,9 @@
   <div
     :class="$style['send-button']"
     @click="send">
-    <span class="icon iconfont icon-send"></span>
+    <svg class="icon svg-icon" aria-hidden="true">
+      <use xlink:href="#icon-send"></use>
+    </svg>
   </div>
 </template>
 
