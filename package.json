@@ -7,6 +7,12 @@
   "browser": {
     "./sfc": "src/vue-chat.vue"
   },
+  "author": "yangpan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unclepan/uncle-vue-chat"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build-bundle": "vue-cli-service build",
