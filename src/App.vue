@@ -1,6 +1,16 @@
 <template>
   <div id="app">
     <vueChat :feedList="feedList" :author="author"/>
+    <div :class="$style.footer">
+      <iframe
+        src="https://ghbtns.com/github-btn.html?user=unclepan&repo=uncle-vue-chat&type=star"
+        frameborder="0"
+        scrolling="0"
+        width="150"
+        height="20"
+        title="GitHub">
+      </iframe>
+    </div>
   </div>
 </template>
 
@@ -29,3 +39,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" module>
+.footer{
+  width: 560px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+</style>
