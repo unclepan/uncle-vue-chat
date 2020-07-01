@@ -1,10 +1,19 @@
 {
   "name": "uncle-vue-chat",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/uncle-vue-chat.umd.js",
+  "module": "dist/uncle-vue-chat.esm.js",
+  "unpkg": "dist/uncle-vue-chat.min.js",
+  "browser": {
+    "./sfc": "src/vue-chat.vue"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build",
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/uncle-vue-chat.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/uncle-vue-chat.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/uncle-vue-chat.min.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -25,6 +34,8 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^9.5.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-vue": "^5.1.9",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
