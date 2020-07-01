@@ -36,7 +36,6 @@ export default {
     padding: 10px 0;
     margin-right: 5px;
     border-radius: 12px;
-    background-color: #ffffff;
     input {
       font-size: 14px;
       line-height: 21px;
