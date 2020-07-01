@@ -1,14 +1,10 @@
 <template>
   <div :class="$style['uncle-vue-chat']">
-    <header-item/>
-    <div :class="$style.main">
-      <div :class="$style.messages" ref="messages">
-        <list :feed="feed" :author-id="authorId"/>
-      </div>
-      <div :class="$style.container">
-        <container @newOwnMessage="onNewOwnMessage"/>
-      </div>
+    <header-item />
+    <div :class="$style.messages" ref="messages">
+      <list :feed="feed" :author-id="authorId"/>
     </div>
+    <container @newOwnMessage="onNewOwnMessage"/>
   </div>
 </template>
 
@@ -87,18 +83,21 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
-  margin: 0 auto;
-  .main{
-    border: 1px solid #e9e9e9;
-    .messages{
-      padding: 0 10px;
-      transition: all 0.5s;
-      overflow: scroll;
-      overflow-x: hidden;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      height: calc(100vh - 184px);
-    }
+  display: flex;
+  flex-direction:column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .messages{
+    padding: 0 10px;
+    transition: all 0.5s;
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex: 1;
   }
 }
 </style>
